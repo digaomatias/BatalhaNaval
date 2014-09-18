@@ -2,7 +2,9 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class BatalhaNaval extends UnicastRemoteObject implements BatalhaNavalInterface {
-
+	
+	private Jogador[] jogadores;
+		
 	/**
 	 * 
 	 */
@@ -10,17 +12,8 @@ public class BatalhaNaval extends UnicastRemoteObject implements BatalhaNavalInt
 
 	protected BatalhaNaval() throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public double calcula(int n) throws RemoteException {
-		double res = 1.0;
 		
-		while(n >= 1)
-			res *= n-1;
-
-		return res;
+		this.jogadores = new Jogador[2];
 	}
 
 	@Override
@@ -30,20 +23,44 @@ public class BatalhaNaval extends UnicastRemoteObject implements BatalhaNavalInt
 	}
 
 	@Override
-	public int temAdversario(int idUsuario) throws RemoteException {
+	public String nomeOponente(int idUsuario) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int posicionaNavio(int idUsuario, String coord, int alin,
+			int tipoNavio) throws RemoteException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int posicionaBarco(int idUsuario, int px, int py, int alin,
-			int tipoBarco) throws RemoteException {
+	public int posicionamentoPronto(int idUsuario) throws RemoteException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int jogoPronto(int idUsuario) throws RemoteException {
+	public int ehMinhaVez(int idUsuario) throws RemoteException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String obtemTabuleiro(int idUsuario) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String obtemLancamentos(int idUsuario) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int executaTiro(int idUsuario, String coord) throws RemoteException {
 		// TODO Auto-generated method stub
 		return 0;
 	}
