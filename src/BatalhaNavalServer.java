@@ -1,12 +1,9 @@
 import java.rmi.Naming;
 import java.rmi.RemoteException;
-import java.util.ArrayList;
 
 
 public class BatalhaNavalServer {
 
-	private ArrayList<BatalhaNaval> jogos;
-	
 	public static void main(String[] args) {
 		try {
 			java.rmi.registry.LocateRegistry.createRegistry(1099);
